@@ -36,7 +36,7 @@
                 firebase.initializeApp(config);
                 firebase.database();
 
-                firebase.database().ref('users/'+ email).set({
+                firebase.database().ref('users/'+ email.replace('.', 'dot')).set({
                     firstName: firstName,
                     email: email 
                 });
