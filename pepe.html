@@ -12,11 +12,9 @@
 
     <body>
         <h1>HI CHI</h1>
-        <form>
             <input type="text" name="firstname" id="firstname" placeholder="Your first name..."><br>
             <input type="text" name="email" id="email" placeholder="Your email..."><br><br>
             <button type="button" onclick="submit()">Submit form</button>
-        </form>
         <script>
             function submit() {
                 var firstName = document.getElementById('firstname').value
@@ -42,6 +40,8 @@
                     username: document.getElementById('firstname').value,
                     email: document.getElementById('email').value
                 });
+            
+                window.open('pepesubmit.html','_blank')
             }
         </script>
     </body>
