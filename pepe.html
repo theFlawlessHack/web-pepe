@@ -1,5 +1,12 @@
 <html>
     <head>
+        <link rel="stylesheet" href="pepe.css">
+
+        <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-messaging.js"></script>
         <title>web-pepe</title>
     </head>
 
@@ -9,17 +16,16 @@
     
             First Name:<br>
             <input type="text" name="firstname" id="firstname"><br>
-            Last Name:<br>
-            <input type="text" name="lastname" id="lastname"><br><br>
-            <button type="button" onclick="submit()">Submit form<button/>
-        <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+            Email:<br>
+            <input type="text" name="email" id="email"><br><br>
+            <button type="button" onclick="submit()">Submit form</button>
         <script>
             function submit() {
                 var firstName = document.getElementById('firstname').value
-                var lastName = document.getElementById('lastname').value
+                var email = document.getElementById('email').value
 
                 console.log(firstName);
-                console.log(lastName);
+                console.log(email);
 
                 // Initialize Firebase
                 var config = {
@@ -32,6 +38,12 @@
                 };
             
                 firebase.initializeApp(config);
+                firebase.database();
+
+                firebase.database().ref('users/01').set({
+                    username: document.getElementById('firstname').value,
+                    email: document.getElementById('email').value
+                });
             }
         </script>
     </body>
