@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>web-pepe</title>
+    </head>
+
+    <body>
+        <h1>HI CHI</h1>
+
+    
+            First Name:<br>
+            <input type="text" name="firstname" id="firstname"><br>
+            Last Name:<br>
+            <input type="text" name="lastname" id="lastname"><br><br>
+            <button type="button" onclick="submit()">Submit form<button/>
+        <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+        <script>
+            function submit() {
+                var firstName = document.getElementById('firstname').value
+                var lastName = document.getElementById('lastname').value
+
+                console.log(firstName);
+                console.log(lastName);
+
+                // Initialize Firebase
+                var config = {
+                    apiKey: "AIzaSyDvjYu-tNMjgFzVETvzMQqSMz-NkqpEWUc",
+                    authDomain: "web-pepe-61623.firebaseapp.com",
+                    databaseURL: "https://web-pepe-61623.firebaseio.com",
+                    projectId: "web-pepe-61623",
+                    storageBucket: "",
+                    messagingSenderId: "927652989018"
+                };
+            
+                firebase.initializeApp(config);
+            }
+        </script>
+    </body>
+</html>
