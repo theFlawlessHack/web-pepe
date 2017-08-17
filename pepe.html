@@ -36,9 +36,9 @@
                 firebase.initializeApp(config);
                 firebase.database();
 
-                firebase.database().ref('users/01').set({
-                    username: document.getElementById('firstname').value,
-                    email: document.getElementById('email').value
+                firebase.database().ref('users/'+ email).set({
+                    firstName: firstName,
+                    email: email 
                 });
             
                 window.open('pepesubmit.html','_blank')
