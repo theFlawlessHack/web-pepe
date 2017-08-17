@@ -15,3 +15,33 @@ h1 {
     font-family: sans-serif;
     font-size: 3em;
 }
+
+input[type=text], select{
+    font-family: sans-serif;
+
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 75%;
+    height: 3em;
+
+    background-color: #EED8D2; 
+    color: #222941;
+
+    border-radius: 4px;
+    border-color: #222941;
+
+    margin: 0 auto;
+    display: table;
+}
+
+p {
+    font-size: .75em;
+}

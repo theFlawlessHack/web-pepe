@@ -12,13 +12,11 @@
 
     <body>
         <h1>HI CHI</h1>
-
-    
-            First Name:<br>
-            <input type="text" name="firstname" id="firstname"><br>
-            Email:<br>
-            <input type="text" name="email" id="email"><br><br>
+        <form>
+            <input type="text" name="firstname" id="firstname" placeholder="Your first name..."><br>
+            <input type="text" name="email" id="email" placeholder="Your email..."><br><br>
             <button type="button" onclick="submit()">Submit form</button>
+        </form>
         <script>
             function submit() {
                 var firstName = document.getElementById('firstname').value
